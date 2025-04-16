@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: kt6klqoks-dotnet-basic-gitops
+  description: This is GitOps manifest for kt6klqoks-dotnet-basic   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=kt6klqoks-dotnet-basic
+    backstage.io/kubernetes-id: kt6klqoks-dotnet-basic 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: rhopp-rhtap-testing/kt6klqoks-dotnet-basic-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:kt6klqoks-dotnet-basic
